@@ -2,7 +2,7 @@ library(tidyverse)
 library(survival)
 library(xtable)
 
-bresmack <- read_csv("C:/Users/David Leigh/Desktop/BIOSTATS 9510/bresmack.csv") %>%
+bresmack <- read_csv("bresmack.csv") %>%
   mutate(obese = ifelse(obese == 9, 0, obese),
          conjest = ifelse(dose == 0, 0, 1),
          dose = relevel(as.factor(ifelse(dose == 9, NA, 
